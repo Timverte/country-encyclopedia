@@ -2,15 +2,15 @@
 
 * add modelFor & paramsFor into the application to fetch from parent
 * fill-in-form ==> the button doesn't pass the info yet
-* add a login functionality
+* add a login functionality ==> now the login button doesn't send data yet to the controller, also when pushing login button, it just reads the empty defined username & pass ==> now hardcoded to admin admin
 
 # country-encyclopedia
 Welcome to my first ember.js project.
 I am not a front-end developer so there will probably be some best practices that I didn't follow or some basic mistakes that I made.
 
-In case you are able to help me please consider just adding a comment to the code.
+In case you are able to help, please consider just adding a comment to the code.
 
-Remember, this case is not about CSS or html but using the ember framework.
+Remember, this case is not about CSS or html but about using the ember framework.
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
