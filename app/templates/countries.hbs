@@ -1,0 +1,30 @@
+<div>
+  <h1>List of all country on the world !</h1>
+
+  <div class="country">
+    {{outlet}}
+  </div>
+
+  {{#each model as |country|}}  
+    <!-- When using an id to pass on to the transitionTo method, you will invoke the model() hook from country-->
+    <p role="button" {{action "goToCountryWithId" country.id}}>
+      {{country.name}}<br>
+      this will call the country with the ID and transionTo method
+    </p>
+
+    <p role="button">
+      {{#link-to "countries.country" country.id }}
+        {{country.name}}<br>
+        this will call the country with the ID and -link-to- helper
+      {{/link-to}}
+    </p>
+
+    <!-- when using a complete object, the model() hook of country will not be called -->
+    <p>
+      {{country.id}}<br>
+      {{link-to "See country details with complete object as param !" "countries.country" country}}
+    </p>
+
+    <hr class="half"><br>
+  {{/each}}
+</div>

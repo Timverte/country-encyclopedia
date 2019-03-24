@@ -1,0 +1,9 @@
+
+  <h1>Country details</h1>
+
+  {{#each model as |country|}}
+    <img class="flag" src={{country.pic}} alt={{country.name}}><br>
+    {{country.name}}<br>
+    {{country.part}}<br>
+  {{/each}}
+

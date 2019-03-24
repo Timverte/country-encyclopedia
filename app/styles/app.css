@@ -1,0 +1,25 @@
+div.intro{
+    padding-top: 10px;
+    padding-left: 80px;
+    padding-right: 10px;
+    border: 1px dotted black;
+}
+
+p.p-intro{
+    color: darkblue;
+}
+
+div.country{
+    width: 500px;
+    float: right;
+    background-color: green;
+}
+
+hr.half{
+    float: left;
+    width: 500px;
+}
+
+img.flag{
+    width: 80px;
+}
