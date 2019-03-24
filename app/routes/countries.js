@@ -37,5 +37,18 @@ export default Route.extend({
         goToCountryWithId(id){
             this.transitionTo("countries.country" , id);
         },
+
+        willTransition(){
+            alert("will transaction")
+        }
+    },
+
+    // simple redirect when 4 countries are in the list, already redirect to the first country
+    // !!! normaly the willTransition should be called after any transitionTo , but not here ????
+    // Maybe because of redirect => also calls it with {{#link-to}} 
+    redirect(model){
+        if (model.get('length') === 4){
+            this.transitionTo("countries.country", model.get('firstObject').id);
+        }
     }
 });

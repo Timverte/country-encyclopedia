@@ -12,6 +12,7 @@ export default Route.extend({
     actions:{
         willTransition(transition){
             alert("willTransition from index");
+            transition.abort;
         },
 
         didTransition(){

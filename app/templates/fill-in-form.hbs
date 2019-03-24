@@ -1,5 +1,18 @@
-<!--  this form has to be filled in.
-    we will use this page to show the 
-    willTransition functionality-->
+<h1>Fill in your information !</h1>
+  
+<form>
+  First name:<br>
+  <input class="box" id="firstName" name="firstName" type="text"><br>
+  <br>
 
-<button {{action "btnClicked"}} class= "fillBtn" > Click Me!</button>
+  Last name:<br>
+  <input class="box" name="lastName" type="text"><br>
+  <br>
+
+  Age:<br>
+  <input class="box" maxlenght="3" name="age" type="text"><br>
+  <br>
+
+  <!-- doesn't work yet-->
+  <button {{action "btnClicked" firstName}} class= "fillBtn" > Submit</button>
+</form>

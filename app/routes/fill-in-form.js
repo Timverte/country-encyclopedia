@@ -11,7 +11,7 @@ export default Route.extend({
     // willTransition, activate, deactivate, didtransition, loading, error
     actions:{
         willTransition(transition){ 
-            if (didUserFillInAllField == null){
+            if (this.controller.get('didUserFillInAllField') == true){
                 transition.abort();
             }
         },
