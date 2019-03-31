@@ -39,7 +39,7 @@ export default Route.extend({
         },
 
         willTransition(){
-            alert("will transaction")
+            alert("will transition")
         }
     },
 
@@ -47,7 +47,9 @@ export default Route.extend({
     // !!! normaly the willTransition should be called after any transitionTo , but not here ????
     // Maybe because of redirect => also calls it with {{#link-to}} 
     redirect(model){
-        if (model.get('length') === 4){
+        if (model.get('length') === 5){
+
+            model.set('selectedCountry', )
             this.transitionTo("countries.country", model.get('firstObject').id);
         }
     }

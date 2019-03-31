@@ -14,9 +14,7 @@ export default Controller.extend({
       // somehow place user and pass into the defined username and password
 
       if (authenthicate()){
-
-      } else {
-
+        alert("user = " + user + " password = " + pass);
       }
     }
   }

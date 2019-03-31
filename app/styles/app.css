@@ -10,9 +10,10 @@ p.p-intro{
 }
 
 div.country{
-    width: 500px;
+    width: 800px;
     float: right;
     background-color: green;
+    overflow:auto;
 }
 
 hr.half{
@@ -24,6 +25,11 @@ img.flag{
     width: 80px;
 }
 
-input.box{
-    
+div.countries{
+    max-width: 500px;
+}
+
+div.checkbox.checkbox-primary {
+    float: right;
+    padding-top: 10px;
 }

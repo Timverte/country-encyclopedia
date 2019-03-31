@@ -3,7 +3,7 @@
 * add modelFor & paramsFor into the application to fetch from parent
 * fill-in-form ==> the button doesn't pass the info yet
 * add a login functionality ==> now the login button doesn't send data yet to the controller, also when pushing login button, it just reads the empty defined username & pass ==> now hardcoded to admin admin
-
+* Add a TODO page --> according to computed properties and aggregate data (Ember Guide)
 # country-encyclopedia
 Welcome to my first ember.js project.
 I am not a front-end developer so there will probably be some best practices that I didn't follow or some basic mistakes that I made.

@@ -5,26 +5,37 @@
     {{outlet}}
   </div>
 
-  {{#each model as |country|}}  
-    <!-- When using an id to pass on to the transitionTo method, you will invoke the model() hook from country-->
-    <p role="button" {{action "goToCountryWithId" country.id}}>
-      {{country.name}}<br>
-      this will call the country with the ID and transionTo method
-    </p>
+  <div class="countries">
+    {{#each model as |country|}}  
+      <div class="checkbox checkbox-primary">
+        <input id="checkbox" class="styled" type="checkbox">
+        <label for="checkbox">
+            Select
+        </label>
+      </div>
 
-    <p role="button">
-      {{#link-to "countries.country" country.id }}
-        {{country.name}}<br>
-        this will call the country with the ID and -link-to- helper
-      {{/link-to}}
-    </p>
+      <div class="smallContainer">
+        <!-- When using an id to pass on to the transitionTo method, you will invoke the model() hook from country-->
+        <p role="button" {{action "goToCountryWithId" country.id}}>
+          {{country.name}}<br>
+          this will call the country with the ID and transionTo method
+        </p>
 
-    <!-- when using a complete object, the model() hook of country will not be called -->
-    <p>
-      {{country.id}}<br>
-      {{link-to "See country details with complete object as param !" "countries.country" country}}
-    </p>
+        <p role="button">
+          {{#link-to "countries.country" country.id }}
+            {{country.name}}<br>
+            this will call the country with the ID and -link-to- helper
+          {{/link-to}}
+        </p>
 
-    <hr class="half"><br>
-  {{/each}}
+        <!-- when using a complete object, the model() hook of country will not be called -->
+        <p {{action "countryIsSelected" country.id}}>
+          {{country.id}}<br>
+          {{link-to "See country details with complete object as param !" "countries.country" country}}
+        </p>
+
+        <hr class="half"><br>
+      </div>
+    {{/each}}
+  </div>
 </div>
